@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: darkgrey;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 15px;
+}
+
+.item {
+  width: 200px;
+  height: 70px;
+  font-size: 20px;
+  border: 2px solid;
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  align-self: flex-start;
+}
+
+.item3 {
+  align-self: flex-end; /* define onde quer que o item fique na tela */
+}

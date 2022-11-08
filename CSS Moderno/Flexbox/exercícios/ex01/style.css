@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: darkgray;
+}
+
+p {
+  font-size: 20px;
+}
+
+header, footer {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: white;
+  border: 2px solid;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap:10px;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+  margin: 10px;
+  align-content: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 300px;
+  height: 230px;
+  border: 2px solid;
+  background-color: white;
+}
+

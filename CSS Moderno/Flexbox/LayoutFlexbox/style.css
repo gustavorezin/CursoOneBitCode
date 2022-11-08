@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: darkgrey;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0 15px; /* espaçamento entre os itens */
+  /* flex-wrap: wrap; quebra de linha quando display é menor */
+}
+
+.item {
+  width: 100%;
+  height: 70px;
+  font-size: 20px;
+  border: 2px solid;
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-basis: 200px; tamanho do item, libera o flex-grow e flex-shrink */
+}
+
+.item2 {
+  flex: 1 0 200px; /* flex-grow, flex-shrink, flex-basis */
+}

@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background: #fffafa;
+  margin: auto;
+  width: 70%;
+  min-height: 100vh;
+}
+
+section {
+  padding: 30px;
+}
+
+.date {
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  color: #008080;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-weight: 100px;
+  margin-bottom: 15px;
+}
+
+.post-content {
+  font-family: 'Open Sans';
+}
