@@ -20,6 +20,7 @@ const nomes = personagens.map(function (personagem) {
   return personagem.nome
 })
 
+// peguei todos os nomes
 console.log(nomes)
 
 // FILTER -------------------------------------------------------------
@@ -36,4 +37,42 @@ const orcs = personagens.filter(function (personagem) {
   return personagem.raca === "Orc"
 })
 
+// filtrei apenas os personagens da raca orc
 console.log(orcs)
+
+// REDUCE -------------------------------------------------------------
+const nivelTotal = personagens.reduce(function (valorAcumulado, personagem) {
+  return valorAcumulado + personagem.nivel
+}, 0)
+
+// somei os niveis de cada personagem
+console.log(nivelTotal)
+
+const racas = personagens.reduce(function (valorAcumulado, personagem) {
+  if (valorAcumulado[personagem.raca]) {
+    valorAcumulado[personagem.raca].push(personagem)
+  } else {
+    valorAcumulado[personagem.raca] = [personagem]
+  }
+
+  return valorAcumulado
+}, {})
+
+// gerei um objeto trazendo todos os elementos dos persnagens divido por raca
+console.log(racas)
+
+// SORT -------------------------------------------------------------
+// modifica o array original
+// vai deixar em ordem crescente por nível
+personagens.sort(function (elem1, elem2) {
+  return elem1.nivel - elem2.nivel 
+})
+
+console.log(personagens)
+
+// dica para nao alterar o array original
+const personagensOrganizados = personagens.slice().sort(function (elem1, elem2) {
+  return elem1.nivel - elem2.nivel 
+})
+
+console.log(personagensOrganizados)
