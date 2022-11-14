@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convocação da Seleção</title>
+</head>
+<body>
+  <h1>Convocação da Seleção</h1>
+  <hr>
+  <h2>Convocar jogador</h2>
+  <div>
+    <label for="name">Nome:</label>
+    <input type="text" name="name" id="name">
+    <label for="position">Posição:</label>
+    <select name="position" id="position">
+      <option value="gol" selected>Goleiro</option>
+      <option value="lat">Lateral</option>
+      <option value="zag">Zagueiro</option>
+      <option value="mc">Meio Campo</option>
+      <option value="ata">Atacante</option>
+    </select>
+    <label for="number">Número:</label>
+    <input type="number" name="number" id="number">
+    <button onclick="addPlayer()">Convocar</button>
+  </div>
+
+  <br>
+  <h2>Remover jogador</h2>
+  <div>
+    <label for="numberToRemove">Número:</label>
+    <input type="number" name="numberToRemove" id="numberToRemove">
+    <button onclick="removePlayer()">Remover jogador</button>
+  </div>
+
+  <hr>
+  <h3>Convocados</h3>
+  <ul id="team-list"></ul>
+
+  <script src="./index.js"></script>
+</body>
+</html>
