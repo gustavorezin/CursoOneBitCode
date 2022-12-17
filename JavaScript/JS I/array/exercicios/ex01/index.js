@@ -1,8 +1,8 @@
 let menu;
 let pacientes = [];
+listaPacientes = ""
 
 do {
-    listaPacientes = ""
     for(let i = 0; i < pacientes.length; i++) {
         listaPacientes += `${i+1}. ${pacientes[i]} \n`
     }
@@ -14,13 +14,16 @@ do {
         "\n[2] - Consultar paciente"+
         "\n[3] - Sair"
         ))
-    
+
     switch(menu) {
         case 1:
             pacientes.push(prompt("Informe o nome do novo paciente:"))
+            console.log(pacientes)
             break
         case 2:
             const pacienteConsultado = pacientes.shift()
+            console.log(pacienteConsultado)
+            console.log(pacientes)
             if(pacienteConsultado) { // se existe pacienteConsultado
                 alert(`Paciente consultado: ${pacienteConsultado}`)
             } else {
@@ -32,6 +35,7 @@ do {
             break
         default:
             alert("Opção inválida!")
-    }
+            
+    }    
 
 } while(menu !== 3)
