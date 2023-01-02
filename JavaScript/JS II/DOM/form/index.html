@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhando com formulários</title>
+</head>
+<body>
+  <h1>Trabalhando com formulários</h1>
+  <hr>
+  <h2>Montar pedido</h2>
+  <form id="orderForm">
+    <div>
+      <label for="name">Nome</label><br>
+      <input type="text" name="name" id="name">
+    </div>
+    <br>
+    <div>
+      <label for="address">Endereço de entrega</label><br>
+      <input type="text" name="address" id="address">
+    </div>
+    <br>
+    <div>
+      <label for="breadType">Tipo de pão</label><br>
+      <select name="breadType" id="breadType">
+        <option selected disabled>Selecione uma opção...</option>
+        <option value="3 queijos">3 queijos</option>
+        <option value="9 grãos">9 grãos</option>
+        <option value="Francês">Francês</option>
+        <option value="Manteiga temperada">Manteiga temperada</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <label for="main">Principal</label><br>
+      <input type="radio" name="main" id="meat" value="Carne">
+      <label for="meat">Carne</label>
+      <input type="radio" name="main" id="chicken" value="Frango">
+      <label for="chicken">Frango</label>
+      <input type="radio" name="main" id="vegan" value="Vegano">
+      <label for="vegan">Vegano</label>
+    </div>
+    <br>
+    <div>
+      <label for="additional">Adicional:</label><br>
+      <input type="checkbox" name="additional" id="lettuce" value="Alface">
+      <label for="lettuce">Alface</label>
+      <input type="checkbox" name="additional" id="tomato" value="Tomate">
+      <label for="tomato">Tomate</label>
+      <input type="checkbox" name="additional" id="olive" value="Azeitonas">
+      <label for="olive">Azeitonas</label>
+      <input type="checkbox" name="additional" id="carrot" value="Cenoura">
+      <label for="carrot">Cenoura</label>
+      <input type="checkbox" name="additional" id="pickles" value="Picles">
+      <label for="pickles">Picles</label>
+    </div>
+    <br>
+    <div>
+      <label for="observations">Observações</label><br>
+      <textarea name="observations" id="observations" cols="30" rows="10"></textarea>
+    </div>
+    <br>
+    <button>Fechar pedido</button>
+  </form>
+
+  <script src="./index.js"></script>
+</body>
+</html>
