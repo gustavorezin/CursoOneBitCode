@@ -12,8 +12,8 @@ class Product {
   }
 
   calculateDiscount(percentualDiscount) {
-    const disc = percentualDiscount / 100;
-    console.log(this.price * disc);
+    const discount = percentualDiscount / 100;
+    console.log(this.price * discount);
   }
 }
 
