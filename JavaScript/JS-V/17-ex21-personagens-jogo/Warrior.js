@@ -1,21 +1,25 @@
-class Warrior extends Character {
-  constructor(name, lifePts, attackPts, defensePts, escudo, posicao) {
+const Character = require("./Character");
+
+module.exports = class Warrior extends Character {
+  constructor(name, lifePts, attackPts, defensePts, shieldPts) {
     super(name, lifePts, attackPts, defensePts);
-    this.escudo = escudo;
-    this.posicao = posicao;
+    this.shieldPts = shieldPts;
+    this.stance = "attacking";
   }
 
-  attack(character) {
-    if (this.posicao === "ATQ") {
-      return super.atacar(character);
+  attack(targetCharacter) {
+    if (this.stance === "attacking") {
+      super.attack(targetCharacter);
     }
   }
 
-  mudarPosicao() {
-    if (this.posicao === "DEF") {
-      this.defesa += this.escudo;
+  switchStance() {
+    if (this.stance === "attacking") {
+      this.stance = "defending"
+      this.defensePts += this.shieldPts
     } else {
-      this.defesa;
+      this.stance = "attacking"
+      this.defensePts -= this.shieldPts
     }
   }
 }

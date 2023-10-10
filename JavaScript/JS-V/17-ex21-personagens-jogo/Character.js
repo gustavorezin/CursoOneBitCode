@@ -1,4 +1,4 @@
-export class Character {
+module.exports = class Character {
   constructor(name, lifePts, attackPts, defensePts) {
     this.name = name;
     this.lifePts = lifePts;
