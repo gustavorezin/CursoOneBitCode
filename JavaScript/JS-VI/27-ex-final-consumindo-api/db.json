@@ -16,9 +16,19 @@
       "id": 4
     },
     {
-      "name": "Conta de luz",
-      "amount": -150,
-      "id": 5
+      "name": "Venda teclado",
+      "amount": 300,
+      "id": 6
+    },
+    {
+      "name": "Lanche",
+      "amount": -20,
+      "id": 7
+    },
+    {
+      "name": "Lanche",
+      "amount": -15.5,
+      "id": 8
     }
   ]
 }
