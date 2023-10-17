@@ -1,6 +1,6 @@
 ## INICIAR PROJETO
 
-- npm init
+- npm init -y
 
 ## INSTALAR TS
 
@@ -15,9 +15,10 @@ workspace
 ## COMPILAR O PROJETO
 
 - tsc nomearquivo.TS
-- ou configurar tsconfig.js => AUTOMATICAMENTE COM tsc --init
+- ou configurar tsconfig.json => AUTOMATICAMENTE COM tsc --init
 
 ## TESTAR O PROJETO
 
 - node nomearquivo.JS
-- caso tsconfig.js configurado => node main.JS
+- caso tsconfig.json configurado => node main.JS
+- caso package.json configurado => npm run watch
