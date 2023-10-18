@@ -54,6 +54,19 @@ function showTopFiveUsers() {
     console.log(message);
 }
 (async () => {
+    const usernames = [
+        "gustavorezin",
+        "brunogmadeira",
+        "danielredivo",
+        "liepboeger",
+        "welquer",
+        "jaisonrs",
+        "viniciusbussolo1",
+    ];
+    const userPromises = usernames.map((username) => fetchUser(username));
+    await Promise.all(userPromises);
+    /*
+    MESMA COISA QUE FAZER ISSO:
     await fetchUser("gustavorezin");
     await fetchUser("brunogmadeira");
     await fetchUser("danielredivo");
@@ -62,7 +75,9 @@ function showTopFiveUsers() {
     await fetchUser("jaisonrs");
     await fetchUser("gustavoctt");
     await fetchUser("viniciusbussolo1");
-    await fetchUserRepos("gustavorezin");
+    await fetchUserRepos(usernames[0]);
+    */
+    await fetchUserRepos(usernames[0]);
     showAllUsers();
     showReposTotal();
     showTopFiveUsers();
